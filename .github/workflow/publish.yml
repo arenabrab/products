@@ -16,7 +16,6 @@ jobs:
         with:
           arguments: bootBuildImage
 
-
       - uses: azure/docker-login@v1
         with:
           login-server: barbanera.azurecr.io
