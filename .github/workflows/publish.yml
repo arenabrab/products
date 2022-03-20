@@ -30,6 +30,6 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
 
       - run: |
-          docker tag docker.io/library/products:0.0.1-SNAPSHOT barbanera.azure.cr.io/products:${{ github.sha }}
+          docker tag docker.io/library/products:0.0.1-SNAPSHOT barbanera.azurecr.io/products:${{ github.sha }}
           docker images -a
           docker image push barbanera.azurecr.io/products:${{ github.sha }}
