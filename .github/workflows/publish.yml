@@ -31,4 +31,5 @@ jobs:
 
       - run: |
           docker tag docker.io/library/products:0.0.1-SNAPSHOT barbanera.azure.cr.io/products:${{ github.sha }}
-          docker push barbanera.azurecr.io/products:${{ github.sha }}
+          docker images -a
+          docker image push barbanera.azurecr.io/products:${{ github.sha }}
